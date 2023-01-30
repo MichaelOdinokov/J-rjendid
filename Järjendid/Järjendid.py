@@ -1,7 +1,7 @@
 ﻿#Самостоятельная работа
 spisok=[]
 l=["Kapibara"]
-b="Belka"
+b=["Belka"]
 l_list=list(l)
 print(l_list)
 
@@ -54,11 +54,8 @@ while True:
         print(l_list)
 
     elif valik==9:
-        a=int(input("Введи позиции, которую хочешь убрать"))
-        if n>=-1:# ei tööta 
-            for i in range(a-1):
-                l_list.indx(a, [l_list[l]])
-                print(l)
+            l_list.index
+            print(l_list)
 
     elif valik==10:
         g=lambda g:g[0]
