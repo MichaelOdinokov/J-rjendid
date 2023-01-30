@@ -1,6 +1,6 @@
 ﻿#Самостоятельная работа
 spisok=[]
-l=["Kapibara"]
+l=["Kapibara", "Kot"]
 b=["Belka"]
 l_list=list(l)
 print(l_list)
@@ -54,15 +54,12 @@ while True:
         print(l_list)
 
     elif valik==9:
-            l_list.index
-            print(l_list)
+            index=l.index("Kapibara")
+            print(index)
+
 
     elif valik==10:
-        g=lambda g:g[0]
-       #3 l.sort(key=g, revers=True)
-        s_l=sorted(l,key=g)
-        for i in l:
-            print(i)
+        l.sort(key=lambda x: len(x))
         print(l)
 
     elif valik==8:
