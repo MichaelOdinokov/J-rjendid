@@ -1,7 +1,7 @@
 ﻿#Самостоятельная работа
 spisok=[]
 l=["Kapibara"]
-b=["Belka"]
+b="Belka"
 l_list=list(l)
 print(l_list)
 
@@ -16,49 +16,70 @@ while True:
     print("8 - Удаляет первый элемент в списке, имеющий значение x")
     print("9 - Возвращает положение первого элемента от start до end со значением x")
     print("10 - Сортирует список на основе функции")
+
     valik=int(input())
     if valik==1:
         a=input("доббавить животное")
         l_list.append(a)
         print(f"{l}", l_list)
+
     elif valik==2:
         l_list.extend(b)
         print(l_list)
+
     elif valik==3:
         a=input("Введи ещё одно животное:")
         i=int(input("Введи позиции:"))
         l_list.insert(i-1,a) #0,1,2...
         print(l_list)
+
     elif valik==4:
         l_list.reverse(l) 
         print(l_list)
+
     elif valik==5:
         a=int(input("Введи позиции, которую хочешь убрать"))
-        if a>0:
-            for i in range(a):
-                l_list.pop(a)
-                print(l_list)
+        if a>=0 and a<len(l_list):
+            l_list.pop(a-1)
+            print(l_list)
+        else:
+            print("Ei ole see postion")
+
     elif valik==6:
         l_list.copy(l)
         print(l_list)
+
     elif valik==7:
         l_list.clear(l)
         print(l_list)
+
     elif valik==9:
-        l_list.index
-        print(l)
+        a=int(input("Введи позиции, которую хочешь убрать"))
+        if n>=-1:# ei tööta 
+            for i in range(a-1):
+                l_list.indx(a, [l_list[l]])
+                print(l)
+
     elif valik==10:
-        g=lambda g:g[1]
+        g=lambda g:g[0]
         l_list.sort(key=g)
         for i in l:
             print(i)
         print(l)
+
     elif valik==8:
-        a=input("Введи букву, которую хочешь удалить")
+        a=input("Введи , которую хочешь удалить")
+        a=a.lower()
+        listcopy_list=[]
+        for t in (l_list):
+            listcopy_list.append(t.lower())
+        print(listcopy_list)
+
         n=l_list.count(a)
         if n>0:
            for i in range(n):
                 l_list.remove(a)
+
         else:
             print("Искомой буквы нет")
         print(l_list)
