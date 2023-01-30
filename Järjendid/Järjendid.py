@@ -59,7 +59,8 @@ while True:
 
     elif valik==10:
         g=lambda g:g[0]
-        l_list.sort(key=g)
+       #3 l.sort(key=g, revers=True)
+        s_l=sorted(l,key=g)
         for i in l:
             print(i)
         print(l)
